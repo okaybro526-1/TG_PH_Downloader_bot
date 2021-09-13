@@ -42,7 +42,7 @@ async def gstart(_, message: Message):
 
 
 @Bellayt.on_message(filters.regex("^ytdl_video$"))
-async def callback_query_ytdl_video(_, ytdl_video):
+async def ytdl_video(_, ytdl_video):
     try:
         # url = callback_query.message.text
         url = callback_query.message.reply_to_message.text
