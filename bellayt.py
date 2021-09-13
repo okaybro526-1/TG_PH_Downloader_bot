@@ -33,7 +33,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "💦 HARP TECH 💦", url="https://t.me/HARP_Tech")
+                        "💦 All In One Porn Bot 💦", url="https://t.me/educationalvideos_bot")
                 ]
             ]
         )
@@ -107,7 +107,7 @@ async def send_audio(message: Message, info_dict, audio_file):
         get_file_extension_from_url(thumbnail_url)
     # info (s2tw)
     webpage_url = info_dict['webpage_url']
-    title = '@HARP_Tech '+s2tw(info_dict['title'])
+    title = '@educationalvideos_bot '+s2tw(info_dict['title'])
     caption = f"<b><a href=\"{webpage_url}\">{title}</a></b>"
     duration = int(float(info_dict['duration']))
     performer = s2tw(info_dict['uploader'])
@@ -158,7 +158,7 @@ async def send_video(message: Message, info_dict, video_file):
         get_file_extension_from_url(thumbnail_url)
     # info (s2tw)
     webpage_url = info_dict['webpage_url']
-    title = '@HARP_Tech '+s2tw(info_dict['title'])
+    title = '@educationalvideos_bot '+s2tw(info_dict['title'])
     caption = f"<b><a href=\"{webpage_url}\">{title}</a></b>"
     duration = int(float(info_dict['duration']))
     width, height = get_resolution(info_dict)
@@ -174,8 +174,8 @@ async def send_video(message: Message, info_dict, video_file):
                         callback_data="forward_video"
                     ),
                     InlineKeyboardButton(
-                        "Channel 🇱🇰",
-                        url="https://t.me/HARP_Tech"
+                        "Contact 👤",
+                        url="https://t.me/xtronsbot"
                     )
                 ]
             ]
@@ -224,7 +224,7 @@ async def callback_query_forward_video(_, callback_query):
 print(
     """
 Bot Started!
-Join @HARP_Tech
+Visit @educationalvideos_bot
 """
 )
 
