@@ -44,19 +44,19 @@ async def gstart(_, message: Message):
 @Bellayt.on_message(filters.regex("^ytdl_video$"))
 async def ytdl_video(_, ytdl_video):
     try:
-        # url = callback_query.message.text
-        url = callback_query.message.reply_to_message.text
+        # url = message.text
+        url = message.reply_to_message.text
         ydl_opts = {
             'format': 'best[ext=mp4]',
             'outtmpl': '%(title)s - %(extractor)s-%(id)s.%(ext)s',
             'writethumbnail': True
         }
         with YoutubeDL(ydl_opts) as ydl:
-            message = callback_query.message
+            message = message
             await message.reply_chat_action("typing")
             info_dict = ydl.extract_info(url, download=False)
             # download
-            await callback_query.edit_message_text("**Downloading video. Please wait...**")
+            await edit_message_text("**Downloading video. Please wait...**")
             ydl.process_info(info_dict)
             # upload
             video_file = ydl.prepare_filename(info_dict)
